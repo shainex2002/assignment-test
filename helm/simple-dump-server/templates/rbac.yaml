@@ -1,0 +1,13 @@
+##---
+# serviceaccount
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    heritage: {{.Release.Service | quote}}
+    release: {{.Release.Name | quote}}
+    chart: {{ .Chart.Name }}
+    app: simple-dump-server
+  name: simple-dump-server

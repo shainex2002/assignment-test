@@ -1,0 +1,19 @@
+{{- if .Values.ingress.class }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: simple-dump-server
+  labels:
+    app: simple-dump-server
+    heritage: {{.Release.Service | quote}}
+    release: {{.Release.Name | quote}}
+    chart: {{ .Chart.Name }} 
+spec:
+  rules:
+  - http:
+      paths:
+      - path: "/test"
+        backend:
+          serviceName: simple-dump-server
+          servicePort: 8080
+{{- end }}
