@@ -1,3 +1,4 @@
 apiVersion: v1
 description: A simple http dump server
+version: 1.2.3
 name: simple-dump-server
