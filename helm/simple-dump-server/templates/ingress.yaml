@@ -13,6 +13,7 @@ spec:
   - http:
       paths:
       - path: "/test"
+        pathType: Prefix
         backend:
           service: 
             name: simple-dump-server
