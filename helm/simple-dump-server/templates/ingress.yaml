@@ -18,5 +18,5 @@ spec:
           service: 
             name: simple-dump-server
             port: 
-              number: 8080
+              number: 80
 {{- end }}
