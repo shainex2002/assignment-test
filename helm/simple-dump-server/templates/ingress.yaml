@@ -12,7 +12,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: "/test"
+      - path: /test
         pathType: Prefix
         backend:
           service: 
